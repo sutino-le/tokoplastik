@@ -1,0 +1,1610 @@
+INFO - 2024-11-19 01:15:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 01:15:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 01:15:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 01:15:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 01:15:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 01:28:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-19 01:28:36 --> Error: Class "App\Controllers\ModelBarangMasuk" not found
+in APPPATH\Controllers\AdminBarangMasuk.php on line 31.
+ 1 APPPATH\Controllers\AdminBarangMasuk.php(87): App\Controllers\AdminBarangMasuk->buatFakturBarangMasuk()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->barangMasukTambah()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 01:29:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 01:49:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 01:54:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 01:55:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 01:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 01:57:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 01:57:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-19 01:57:22 --> mysqli_sql_exception: Unknown column 'detbrgkode' in 'on clause' in C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\tokoplastik\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\tokoplastik\system\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tokoplastik\app\Models\ModelBarangMasukTemp.php(16): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\tokoplastik\app\Controllers\AdminBarangMasuk.php(102): App\Models\ModelBarangMasukTemp->tampilDataTemp('2411190001')
+#7 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->tampilDataTempBarangMasuk()
+#8 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+#9 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\tokoplastik\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-19 01:57:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detbrgkode' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\ModelBarangMasukTemp.php(16): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\AdminBarangMasuk.php(102): App\Models\ModelBarangMasukTemp->tampilDataTemp('2411190001')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->tampilDataTempBarangMasuk()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 01:57:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detbrgkode' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Models\ModelBarangMasukTemp.php(16): CodeIgniter\Model->__call('get', [])
+ 6 APPPATH\Controllers\AdminBarangMasuk.php(102): App\Models\ModelBarangMasukTemp->tampilDataTemp('2411190001')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->tampilDataTempBarangMasuk()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 01:57:22 --> [Caused by] mysqli_sql_exception: Unknown column 'detbrgkode' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\ModelBarangMasukTemp.php(16): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\AdminBarangMasuk.php(102): App\Models\ModelBarangMasukTemp->tampilDataTemp('2411190001')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->tampilDataTempBarangMasuk()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 01:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 01:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-19 01:58:16 --> mysqli_sql_exception: Unknown column 'detbrgkode' in 'on clause' in C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\tokoplastik\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\tokoplastik\system\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tokoplastik\app\Models\ModelBarangMasukTemp.php(16): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\tokoplastik\app\Controllers\AdminBarangMasuk.php(102): App\Models\ModelBarangMasukTemp->tampilDataTemp('2411190001')
+#7 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->tampilDataTempBarangMasuk()
+#8 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+#9 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\tokoplastik\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-19 01:58:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detbrgkode' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\ModelBarangMasukTemp.php(16): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\AdminBarangMasuk.php(102): App\Models\ModelBarangMasukTemp->tampilDataTemp('2411190001')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->tampilDataTempBarangMasuk()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 01:58:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detbrgkode' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Models\ModelBarangMasukTemp.php(16): CodeIgniter\Model->__call('get', [])
+ 6 APPPATH\Controllers\AdminBarangMasuk.php(102): App\Models\ModelBarangMasukTemp->tampilDataTemp('2411190001')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->tampilDataTempBarangMasuk()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 01:58:16 --> [Caused by] mysqli_sql_exception: Unknown column 'detbrgkode' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\ModelBarangMasukTemp.php(16): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\AdminBarangMasuk.php(102): App\Models\ModelBarangMasukTemp->tampilDataTemp('2411190001')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->tampilDataTempBarangMasuk()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 01:58:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 01:58:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-19 01:58:43 --> mysqli_sql_exception: Unknown column 'detbrgkode' in 'on clause' in C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\tokoplastik\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\tokoplastik\system\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tokoplastik\app\Models\ModelBarangMasukTemp.php(16): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\tokoplastik\app\Controllers\AdminBarangMasuk.php(102): App\Models\ModelBarangMasukTemp->tampilDataTemp('2411190001')
+#7 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->tampilDataTempBarangMasuk()
+#8 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+#9 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\tokoplastik\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-19 01:58:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detbrgkode' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\ModelBarangMasukTemp.php(16): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\AdminBarangMasuk.php(102): App\Models\ModelBarangMasukTemp->tampilDataTemp('2411190001')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->tampilDataTempBarangMasuk()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 01:58:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detbrgkode' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Models\ModelBarangMasukTemp.php(16): CodeIgniter\Model->__call('get', [])
+ 6 APPPATH\Controllers\AdminBarangMasuk.php(102): App\Models\ModelBarangMasukTemp->tampilDataTemp('2411190001')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->tampilDataTempBarangMasuk()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 01:58:43 --> [Caused by] mysqli_sql_exception: Unknown column 'detbrgkode' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\ModelBarangMasukTemp.php(16): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\AdminBarangMasuk.php(102): App\Models\ModelBarangMasukTemp->tampilDataTemp('2411190001')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->tampilDataTempBarangMasuk()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 01:59:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 01:59:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-19 01:59:55 --> mysqli_sql_exception: Unknown column 'detbrgkode' in 'on clause' in C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\tokoplastik\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\tokoplastik\system\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tokoplastik\app\Models\ModelBarangMasukTemp.php(16): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\tokoplastik\app\Controllers\AdminBarangMasuk.php(102): App\Models\ModelBarangMasukTemp->tampilDataTemp('2411190001')
+#7 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->tampilDataTempBarangMasuk()
+#8 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+#9 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\tokoplastik\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-19 01:59:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detbrgkode' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\ModelBarangMasukTemp.php(16): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\AdminBarangMasuk.php(102): App\Models\ModelBarangMasukTemp->tampilDataTemp('2411190001')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->tampilDataTempBarangMasuk()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 01:59:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detbrgkode' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Models\ModelBarangMasukTemp.php(16): CodeIgniter\Model->__call('get', [])
+ 6 APPPATH\Controllers\AdminBarangMasuk.php(102): App\Models\ModelBarangMasukTemp->tampilDataTemp('2411190001')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->tampilDataTempBarangMasuk()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 01:59:55 --> [Caused by] mysqli_sql_exception: Unknown column 'detbrgkode' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\ModelBarangMasukTemp.php(16): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\AdminBarangMasuk.php(102): App\Models\ModelBarangMasukTemp->tampilDataTemp('2411190001')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->tampilDataTempBarangMasuk()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 02:01:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:01:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-19 02:01:07 --> mysqli_sql_exception: Unknown column 'detbrgkode' in 'on clause' in C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\tokoplastik\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\tokoplastik\system\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tokoplastik\app\Models\ModelBarangMasukTemp.php(16): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\tokoplastik\app\Controllers\AdminBarangMasuk.php(102): App\Models\ModelBarangMasukTemp->tampilDataTemp('2411190001')
+#7 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->tampilDataTempBarangMasuk()
+#8 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+#9 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\tokoplastik\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-19 02:01:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detbrgkode' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\ModelBarangMasukTemp.php(16): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\AdminBarangMasuk.php(102): App\Models\ModelBarangMasukTemp->tampilDataTemp('2411190001')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->tampilDataTempBarangMasuk()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 02:01:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detbrgkode' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Models\ModelBarangMasukTemp.php(16): CodeIgniter\Model->__call('get', [])
+ 6 APPPATH\Controllers\AdminBarangMasuk.php(102): App\Models\ModelBarangMasukTemp->tampilDataTemp('2411190001')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->tampilDataTempBarangMasuk()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 02:01:07 --> [Caused by] mysqli_sql_exception: Unknown column 'detbrgkode' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = \'2411190001\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_temp`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\ModelBarangMasukTemp.php(16): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\AdminBarangMasuk.php(102): App\Models\ModelBarangMasukTemp->tampilDataTemp('2411190001')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->tampilDataTempBarangMasuk()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 02:02:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:02:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:09:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:09:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:13:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:13:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:13:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:13:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:14:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:14:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:14:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:14:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:14:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:14:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:14:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:14:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:15:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:15:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:15:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:15:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:15:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:15:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:15:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:19:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:19:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:19:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:20:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:20:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:20:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-19 02:20:26 --> ErrorException: Undefined property: stdClass::$brgstock
+in APPPATH\Controllers\AdminBarangMasuk.php on line 177.
+ 1 APPPATH\Controllers\AdminBarangMasuk.php(177): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$brgstock', 'C:\\xampp\\htdocs\\tokoplastik\\app\\Controllers\\AdminBarangMasuk.php', 177)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->listCariDataBarang()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 02:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:20:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:20:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:20:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-19 02:20:35 --> ErrorException: Undefined property: stdClass::$brgstock
+in APPPATH\Controllers\AdminBarangMasuk.php on line 177.
+ 1 APPPATH\Controllers\AdminBarangMasuk.php(177): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$brgstock', 'C:\\xampp\\htdocs\\tokoplastik\\app\\Controllers\\AdminBarangMasuk.php', 177)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->listCariDataBarang()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 02:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:21:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:21:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:22:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:22:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:22:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:22:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:22:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:22:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:22:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:24:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:24:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:24:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:24:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:24:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:24:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:24:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:24:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:40:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-19 02:40:12 --> mysqli_sql_exception: Column 'detcabang' cannot be null in C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\tokoplastik\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\tokoplastik\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\tokoplastik\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\tokoplastik\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\tokoplastik\app\Controllers\AdminBarangMasuk.php(281): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->simpanItemBarangMasuk()
+#9 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+#10 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\tokoplastik\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-11-19 02:40:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'detcabang' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barangmasuk_temp` (`detfaktur`, `dethargamasuk`, `dethargajual`, `detjml`, `detsubtotal`, `detketerangan`, `detcabang`) VALUES (:detfaktur:, :dethargamasuk:, :dethargajual:, :detjml:, :detsubtotal:, :detketerangan:, :detcabang:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\AdminBarangMasuk.php(281): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->simpanItemBarangMasuk()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 02:40:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'detcabang' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `barangmasuk_temp` (`detfaktur`, `dethargamasuk`, `dethargajual`, `detjml`, `detsubtotal`, `detketerangan`, `detcabang`) VALUES (\'2411190001\', \'15000,00\', \'15,000\', \'1\', 15000, \'-\', NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `barangmasuk_temp` (`detfaktur`, `dethargamasuk`, `dethargajual`, `detjml`, `detsubtotal`, `detketerangan`, `detcabang`) VALUES (\'2411190001\', \'15000,00\', \'15,000\', \'1\', 15000, \'-\', NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barangmasuk_temp` (`detfaktur`, `dethargamasuk`, `dethargajual`, `detjml`, `detsubtotal`, `detketerangan`, `detcabang`) VALUES (:detfaktur:, :dethargamasuk:, :dethargajual:, :detjml:, :detsubtotal:, :detketerangan:, :detcabang:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\AdminBarangMasuk.php(281): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->simpanItemBarangMasuk()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 02:40:12 --> [Caused by] mysqli_sql_exception: Column 'detcabang' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `barangmasuk_temp` (`detfaktur`, `dethargamasuk`, `dethargajual`, `detjml`, `detsubtotal`, `detketerangan`, `detcabang`) VALUES (\'2411190001\', \'15000,00\', \'15,000\', \'1\', 15000, \'-\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `barangmasuk_temp` (`detfaktur`, `dethargamasuk`, `dethargajual`, `detjml`, `detsubtotal`, `detketerangan`, `detcabang`) VALUES (\'2411190001\', \'15000,00\', \'15,000\', \'1\', 15000, \'-\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `barangmasuk_temp` (`detfaktur`, `dethargamasuk`, `dethargajual`, `detjml`, `detsubtotal`, `detketerangan`, `detcabang`) VALUES (\'2411190001\', \'15000,00\', \'15,000\', \'1\', 15000, \'-\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barangmasuk_temp` (`detfaktur`, `dethargamasuk`, `dethargajual`, `detjml`, `detsubtotal`, `detketerangan`, `detcabang`) VALUES (:detfaktur:, :dethargamasuk:, :dethargajual:, :detjml:, :detsubtotal:, :detketerangan:, :detcabang:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\AdminBarangMasuk.php(281): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->simpanItemBarangMasuk()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 02:40:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-19 02:40:17 --> mysqli_sql_exception: Column 'detcabang' cannot be null in C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\tokoplastik\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\tokoplastik\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\tokoplastik\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\tokoplastik\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\tokoplastik\app\Controllers\AdminBarangMasuk.php(281): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->simpanItemBarangMasuk()
+#9 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+#10 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\tokoplastik\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-11-19 02:40:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'detcabang' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barangmasuk_temp` (`detfaktur`, `dethargamasuk`, `dethargajual`, `detjml`, `detsubtotal`, `detketerangan`, `detcabang`) VALUES (:detfaktur:, :dethargamasuk:, :dethargajual:, :detjml:, :detsubtotal:, :detketerangan:, :detcabang:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\AdminBarangMasuk.php(281): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->simpanItemBarangMasuk()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 02:40:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'detcabang' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `barangmasuk_temp` (`detfaktur`, `dethargamasuk`, `dethargajual`, `detjml`, `detsubtotal`, `detketerangan`, `detcabang`) VALUES (\'2411190001\', \'15000,00\', \'15,000\', \'1\', 15000, \'-\', NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `barangmasuk_temp` (`detfaktur`, `dethargamasuk`, `dethargajual`, `detjml`, `detsubtotal`, `detketerangan`, `detcabang`) VALUES (\'2411190001\', \'15000,00\', \'15,000\', \'1\', 15000, \'-\', NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barangmasuk_temp` (`detfaktur`, `dethargamasuk`, `dethargajual`, `detjml`, `detsubtotal`, `detketerangan`, `detcabang`) VALUES (:detfaktur:, :dethargamasuk:, :dethargajual:, :detjml:, :detsubtotal:, :detketerangan:, :detcabang:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\AdminBarangMasuk.php(281): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->simpanItemBarangMasuk()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 02:40:17 --> [Caused by] mysqli_sql_exception: Column 'detcabang' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `barangmasuk_temp` (`detfaktur`, `dethargamasuk`, `dethargajual`, `detjml`, `detsubtotal`, `detketerangan`, `detcabang`) VALUES (\'2411190001\', \'15000,00\', \'15,000\', \'1\', 15000, \'-\', NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `barangmasuk_temp` (`detfaktur`, `dethargamasuk`, `dethargajual`, `detjml`, `detsubtotal`, `detketerangan`, `detcabang`) VALUES (\'2411190001\', \'15000,00\', \'15,000\', \'1\', 15000, \'-\', NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `barangmasuk_temp` (`detfaktur`, `dethargamasuk`, `dethargajual`, `detjml`, `detsubtotal`, `detketerangan`, `detcabang`) VALUES (\'2411190001\', \'15000,00\', \'15,000\', \'1\', 15000, \'-\', NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barangmasuk_temp` (`detfaktur`, `dethargamasuk`, `dethargajual`, `detjml`, `detsubtotal`, `detketerangan`, `detcabang`) VALUES (:detfaktur:, :dethargamasuk:, :dethargajual:, :detjml:, :detsubtotal:, :detketerangan:, :detcabang:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\AdminBarangMasuk.php(281): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->simpanItemBarangMasuk()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 02:41:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:41:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:42:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:42:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:42:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:42:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:44:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:44:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:45:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:45:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:45:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:45:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:45:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:45:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:45:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:46:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:51:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:51:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:51:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-19 02:51:05 --> ErrorException: Undefined variable $prodnama
+in APPPATH\Views\admin\barangmasuk\modaledititemtemp.php on line 27.
+ 1 APPPATH\Views\admin\barangmasuk\modaledititemtemp.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $prodnama', 'C:\\xampp\\htdocs\\tokoplastik\\app\\Views\\admin\\barangmasuk\\modaledititemtemp.php', 27)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\tokoplastik\\app\\Views\\admin\\barangmasuk\\modaledititemtemp.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/barangmasuk/modaledititemtemp', [], true)
+ 5 APPPATH\Controllers\AdminBarangMasuk.php(337): view('admin/barangmasuk/modaledititemtemp', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->modalEditItemBarangMasuk('1')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 02:51:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:51:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:51:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:51:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:51:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:53:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:53:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:53:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:55:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:55:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:55:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:55:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:55:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:55:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:55:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:55:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:55:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:58:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:58:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:58:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 02:59:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-19 02:59:43 --> ErrorException: Undefined array key "detbrgkode"
+in APPPATH\Controllers\AdminBarangMasuk.php on line 476.
+ 1 APPPATH\Controllers\AdminBarangMasuk.php(476): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detbrgkode"', 'C:\\xampp\\htdocs\\tokoplastik\\app\\Controllers\\AdminBarangMasuk.php', 476)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->modalPembayaranBarangMasukSimpan()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 02:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-19 02:59:48 --> mysqli_sql_exception: Duplicate entry '2411190001' for key 'PRIMARY' in C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\xampp\htdocs\tokoplastik\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\xampp\htdocs\tokoplastik\system\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\tokoplastik\system\BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\tokoplastik\system\Model.php(744): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\tokoplastik\app\Controllers\AdminBarangMasuk.php(466): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->modalPembayaranBarangMasukSimpan()
+#9 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+#10 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\tokoplastik\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-11-19 02:59:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2411190001' for key 'PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barangmasuk` (`faktur`, `tglfaktur`, `jenis`, `idsup`, `totalharga`, `jumlahuang`, `sisauang`) VALUES (:faktur:, :tglfaktur:, :jenis:, :idsup:, :totalharga:, :jumlahuang:, :sisauang:)', [...], false)
+ 2 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\AdminBarangMasuk.php(466): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->modalPembayaranBarangMasukSimpan()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 02:59:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry '2411190001' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `barangmasuk` (`faktur`, `tglfaktur`, `jenis`, `idsup`, `totalharga`, `jumlahuang`, `sisauang`) VALUES (\'2411190001\', \'2024-11-19\', \'Non Pajak\', \'\', \'4000\', \'5000\', \'1000\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `barangmasuk` (`faktur`, `tglfaktur`, `jenis`, `idsup`, `totalharga`, `jumlahuang`, `sisauang`) VALUES (\'2411190001\', \'2024-11-19\', \'Non Pajak\', \'\', \'4000\', \'5000\', \'1000\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barangmasuk` (`faktur`, `tglfaktur`, `jenis`, `idsup`, `totalharga`, `jumlahuang`, `sisauang`) VALUES (:faktur:, :tglfaktur:, :jenis:, :idsup:, :totalharga:, :jumlahuang:, :sisauang:)', [...], false)
+ 4 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\AdminBarangMasuk.php(466): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->modalPembayaranBarangMasukSimpan()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 02:59:48 --> [Caused by] mysqli_sql_exception: Duplicate entry '2411190001' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `barangmasuk` (`faktur`, `tglfaktur`, `jenis`, `idsup`, `totalharga`, `jumlahuang`, `sisauang`) VALUES (\'2411190001\', \'2024-11-19\', \'Non Pajak\', \'\', \'4000\', \'5000\', \'1000\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `barangmasuk` (`faktur`, `tglfaktur`, `jenis`, `idsup`, `totalharga`, `jumlahuang`, `sisauang`) VALUES (\'2411190001\', \'2024-11-19\', \'Non Pajak\', \'\', \'4000\', \'5000\', \'1000\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `barangmasuk` (`faktur`, `tglfaktur`, `jenis`, `idsup`, `totalharga`, `jumlahuang`, `sisauang`) VALUES (\'2411190001\', \'2024-11-19\', \'Non Pajak\', \'\', \'4000\', \'5000\', \'1000\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `barangmasuk` (`faktur`, `tglfaktur`, `jenis`, `idsup`, `totalharga`, `jumlahuang`, `sisauang`) VALUES (:faktur:, :tglfaktur:, :jenis:, :idsup:, :totalharga:, :jumlahuang:, :sisauang:)', [...], false)
+ 5 SYSTEMPATH\Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\AdminBarangMasuk.php(466): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->modalPembayaranBarangMasukSimpan()
+10 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+11 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 03:00:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:00:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:00:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:00:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:00:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:00:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:00:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:00:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:00:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-19 03:00:52 --> ErrorException: Undefined array key "detbrgkode"
+in APPPATH\Controllers\AdminBarangMasuk.php on line 476.
+ 1 APPPATH\Controllers\AdminBarangMasuk.php(476): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detbrgkode"', 'C:\\xampp\\htdocs\\tokoplastik\\app\\Controllers\\AdminBarangMasuk.php', 476)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->modalPembayaranBarangMasukSimpan()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 03:01:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:01:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:01:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:01:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:01:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-19 03:01:56 --> mysqli_sql_exception: Unknown column 'detbrgkode' in 'on clause' in C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\tokoplastik\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\tokoplastik\system\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tokoplastik\app\Models\ModelBarangMasukDetail.php(32): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\tokoplastik\app\Controllers\AdminBarangMasuk.php(523): App\Models\ModelBarangMasukDetail->tampilDataDetail('2411190001')
+#7 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->cetakFaktur('2411190001')
+#8 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+#9 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\tokoplastik\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-19 03:01:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detbrgkode' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\ModelBarangMasukDetail.php(32): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\AdminBarangMasuk.php(523): App\Models\ModelBarangMasukDetail->tampilDataDetail('2411190001')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->cetakFaktur('2411190001')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 03:01:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detbrgkode' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = \'2411190001\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = \'2411190001\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Models\ModelBarangMasukDetail.php(32): CodeIgniter\Model->__call('get', [])
+ 6 APPPATH\Controllers\AdminBarangMasuk.php(523): App\Models\ModelBarangMasukDetail->tampilDataDetail('2411190001')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->cetakFaktur('2411190001')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 03:01:56 --> [Caused by] mysqli_sql_exception: Unknown column 'detbrgkode' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = \'2411190001\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = \'2411190001\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = \'2411190001\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgkode`=`brgbarcode`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\ModelBarangMasukDetail.php(32): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\AdminBarangMasuk.php(523): App\Models\ModelBarangMasukDetail->tampilDataDetail('2411190001')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->cetakFaktur('2411190001')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 03:01:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:01:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-19 03:03:18 --> mysqli_sql_exception: Unknown column 'brgsatuan' in 'on clause' in C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\tokoplastik\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\tokoplastik\system\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tokoplastik\app\Models\ModelBarangMasukDetail.php(32): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\tokoplastik\app\Controllers\AdminBarangMasuk.php(523): App\Models\ModelBarangMasukDetail->tampilDataDetail('2411190001')
+#7 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->cetakFaktur('2411190001')
+#8 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+#9 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\tokoplastik\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-19 03:03:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'brgsatuan' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgid`=`brgbarcode`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\ModelBarangMasukDetail.php(32): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\AdminBarangMasuk.php(523): App\Models\ModelBarangMasukDetail->tampilDataDetail('2411190001')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->cetakFaktur('2411190001')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 03:03:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'brgsatuan' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgid`=`brgbarcode`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = \'2411190001\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgid`=`brgbarcode`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = \'2411190001\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgid`=`brgbarcode`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Models\ModelBarangMasukDetail.php(32): CodeIgniter\Model->__call('get', [])
+ 6 APPPATH\Controllers\AdminBarangMasuk.php(523): App\Models\ModelBarangMasukDetail->tampilDataDetail('2411190001')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->cetakFaktur('2411190001')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 03:03:18 --> [Caused by] mysqli_sql_exception: Unknown column 'brgsatuan' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgid`=`brgbarcode`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = \'2411190001\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgid`=`brgbarcode`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = \'2411190001\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgid`=`brgbarcode`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = \'2411190001\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgid`=`brgbarcode`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\ModelBarangMasukDetail.php(32): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\AdminBarangMasuk.php(523): App\Models\ModelBarangMasukDetail->tampilDataDetail('2411190001')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->cetakFaktur('2411190001')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 03:04:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-19 03:04:01 --> mysqli_sql_exception: Unknown column 'brgsatuan' in 'on clause' in C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\tokoplastik\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\tokoplastik\system\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tokoplastik\app\Models\ModelBarangMasukDetail.php(32): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\tokoplastik\app\Controllers\AdminBarangMasuk.php(523): App\Models\ModelBarangMasukDetail->tampilDataDetail('2411190001')
+#7 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->cetakFaktur('2411190001')
+#8 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+#9 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\tokoplastik\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-19 03:04:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'brgsatuan' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgid`=`brgid`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\ModelBarangMasukDetail.php(32): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\AdminBarangMasuk.php(523): App\Models\ModelBarangMasukDetail->tampilDataDetail('2411190001')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->cetakFaktur('2411190001')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 03:04:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'brgsatuan' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgid`=`brgid`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = \'2411190001\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgid`=`brgid`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = \'2411190001\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgid`=`brgid`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Models\ModelBarangMasukDetail.php(32): CodeIgniter\Model->__call('get', [])
+ 6 APPPATH\Controllers\AdminBarangMasuk.php(523): App\Models\ModelBarangMasukDetail->tampilDataDetail('2411190001')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->cetakFaktur('2411190001')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 03:04:01 --> [Caused by] mysqli_sql_exception: Unknown column 'brgsatuan' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgid`=`brgid`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = \'2411190001\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgid`=`brgid`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = \'2411190001\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgid`=`brgid`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = \'2411190001\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_detail`
+JOIN `barang` ON `detbrgid`=`brgid`
+JOIN `satuan` ON `brgsatuan`=`satid`
+WHERE `detfaktur` = :detfaktur:', [...], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\ModelBarangMasukDetail.php(32): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\AdminBarangMasuk.php(523): App\Models\ModelBarangMasukDetail->tampilDataDetail('2411190001')
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->cetakFaktur('2411190001')
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 03:04:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:05:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:05:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:05:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:05:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:06:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:06:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:06:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:06:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:06:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:06:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:06:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:06:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:07:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:07:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:07:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:09:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:09:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:11:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:11:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:11:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:11:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:11:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:12:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:12:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:12:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-19 03:13:30 --> ErrorException: Undefined variable $title
+in APPPATH\Views\admin\barangmasuk\datadetail.php on line 14.
+ 1 APPPATH\Views\admin\barangmasuk\datadetail.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\xampp\\htdocs\\tokoplastik\\app\\Views\\admin\\barangmasuk\\datadetail.php', 14)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\tokoplastik\\app\\Views\\admin\\barangmasuk\\datadetail.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/barangmasuk/datadetail', [], true)
+ 5 APPPATH\Controllers\AdminBarangMasuk.php(655): view('admin/barangmasuk/datadetail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->tampilDataDetailBarangMasuk()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 03:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:14:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:14:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-19 03:14:35 --> ErrorException: Undefined array key "detbrgkode"
+in APPPATH\Views\admin\barangmasuk\datadetail.php on line 41.
+ 1 APPPATH\Views\admin\barangmasuk\datadetail.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "detbrgkode"', 'C:\\xampp\\htdocs\\tokoplastik\\app\\Views\\admin\\barangmasuk\\datadetail.php', 41)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\tokoplastik\\app\\Views\\admin\\barangmasuk\\datadetail.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/barangmasuk/datadetail', [], true)
+ 5 APPPATH\Controllers\AdminBarangMasuk.php(655): view('admin/barangmasuk/datadetail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->tampilDataDetailBarangMasuk()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 03:14:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:14:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:14:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:14:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-19 03:14:55 --> ErrorException: Undefined array key "prodnama"
+in APPPATH\Views\admin\barangmasuk\datadetail.php on line 42.
+ 1 APPPATH\Views\admin\barangmasuk\datadetail.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "prodnama"', 'C:\\xampp\\htdocs\\tokoplastik\\app\\Views\\admin\\barangmasuk\\datadetail.php', 42)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\tokoplastik\\app\\Views\\admin\\barangmasuk\\datadetail.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/barangmasuk/datadetail', [], true)
+ 5 APPPATH\Controllers\AdminBarangMasuk.php(655): view('admin/barangmasuk/datadetail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->tampilDataDetailBarangMasuk()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 03:15:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:15:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:15:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:15:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:16:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:17:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:17:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:17:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:17:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:17:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:17:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:17:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:17:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:17:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:19:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:19:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:19:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:20:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:20:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:20:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:20:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:20:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:20:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:20:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:20:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:20:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:20:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:20:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:20:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:20:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:20:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:20:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:27:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:27:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:28:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:28:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:28:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-19 03:28:07 --> mysqli_sql_exception: Unknown column 'brgbrgkode' in 'on clause' in C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\tokoplastik\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\tokoplastik\system\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tokoplastik\app\Models\ModelBarangMasukDetail.php(37): CodeIgniter\Model->__call('get', Array)
+#6 C:\xampp\htdocs\tokoplastik\app\Controllers\AdminBarangMasuk.php(871): App\Models\ModelBarangMasukDetail->dataBarangMasuk()
+#7 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->databarangmasuk()
+#8 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+#9 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\tokoplastik\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-11-19 03:28:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'brgbrgkode' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_detail`
+LEFT JOIN `barang` ON `detbrgid`=`brgbrgkode`
+GROUP BY `barangmasuk_detail`.`detbrgid`', [], false)
+ 2 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Models\ModelBarangMasukDetail.php(37): CodeIgniter\Model->__call('get', [])
+ 4 APPPATH\Controllers\AdminBarangMasuk.php(871): App\Models\ModelBarangMasukDetail->dataBarangMasuk()
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->databarangmasuk()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 03:28:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'brgbrgkode' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barangmasuk_detail`
+LEFT JOIN `barang` ON `detbrgid`=`brgbrgkode`
+GROUP BY `barangmasuk_detail`.`detbrgid`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barangmasuk_detail`
+LEFT JOIN `barang` ON `detbrgid`=`brgbrgkode`
+GROUP BY `barangmasuk_detail`.`detbrgid`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_detail`
+LEFT JOIN `barang` ON `detbrgid`=`brgbrgkode`
+GROUP BY `barangmasuk_detail`.`detbrgid`', [], false)
+ 4 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Models\ModelBarangMasukDetail.php(37): CodeIgniter\Model->__call('get', [])
+ 6 APPPATH\Controllers\AdminBarangMasuk.php(871): App\Models\ModelBarangMasukDetail->dataBarangMasuk()
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->databarangmasuk()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 03:28:07 --> [Caused by] mysqli_sql_exception: Unknown column 'brgbrgkode' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `barangmasuk_detail`
+LEFT JOIN `barang` ON `detbrgid`=`brgbrgkode`
+GROUP BY `barangmasuk_detail`.`detbrgid`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barangmasuk_detail`
+LEFT JOIN `barang` ON `detbrgid`=`brgbrgkode`
+GROUP BY `barangmasuk_detail`.`detbrgid`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barangmasuk_detail`
+LEFT JOIN `barang` ON `detbrgid`=`brgbrgkode`
+GROUP BY `barangmasuk_detail`.`detbrgid`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_detail`
+LEFT JOIN `barang` ON `detbrgid`=`brgbrgkode`
+GROUP BY `barangmasuk_detail`.`detbrgid`', [], false)
+ 5 SYSTEMPATH\Model.php(872): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Models\ModelBarangMasukDetail.php(37): CodeIgniter\Model->__call('get', [])
+ 7 APPPATH\Controllers\AdminBarangMasuk.php(871): App\Models\ModelBarangMasukDetail->dataBarangMasuk()
+ 8 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->databarangmasuk()
+ 9 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+10 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 03:28:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-19 03:28:35 --> ErrorException: Undefined array key "prodbarcode"
+in APPPATH\Views\admin\barangmasuk\bm_detail.php on line 35.
+ 1 APPPATH\Views\admin\barangmasuk\bm_detail.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "prodbarcode"', 'C:\\xampp\\htdocs\\tokoplastik\\app\\Views\\admin\\barangmasuk\\bm_detail.php', 35)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\tokoplastik\\app\\Views\\admin\\barangmasuk\\bm_detail.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('admin/barangmasuk/bm_detail', [], true)
+ 5 APPPATH\Controllers\AdminBarangMasuk.php(873): view('admin/barangmasuk/bm_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->databarangmasuk()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 03:29:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:29:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-11-19 03:29:10 --> mysqli_sql_exception: Unknown column 'detbrgkode' in 'on clause' in C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\tokoplastik\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\tokoplastik\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\tokoplastik\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\tokoplastik\app\Models\ModelBarangMasukDetailPagination.php(60): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\tokoplastik\app\Controllers\AdminBarangMasuk.php(887): App\Models\ModelBarangMasukDetailPagination->get_datatables('', '', '')
+#6 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->detailListDataBarangMasuk()
+#7 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+#8 C:\xampp\htdocs\tokoplastik\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\tokoplastik\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-11-19 03:29:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detbrgkode' in 'on clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_detail`
+LEFT JOIN `produk` ON `detbrgkode`=`prodbarcode`
+LEFT JOIN `barangmasuk` ON `detfaktur`=`faktur`
+LEFT JOIN `suplier` ON `idsup`=`supid`
+ORDER BY `prodnama` ASC
+ LIMIT 10', [], false)
+ 2 APPPATH\Models\ModelBarangMasukDetailPagination.php(60): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\AdminBarangMasuk.php(887): App\Models\ModelBarangMasukDetailPagination->get_datatables('', '', '')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->detailListDataBarangMasuk()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 03:29:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'detbrgkode' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barangmasuk_detail`
+LEFT JOIN `produk` ON `detbrgkode`=`prodbarcode`
+LEFT JOIN `barangmasuk` ON `detfaktur`=`faktur`
+LEFT JOIN `suplier` ON `idsup`=`supid`
+ORDER BY `prodnama` ASC
+ LIMIT 10')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barangmasuk_detail`
+LEFT JOIN `produk` ON `detbrgkode`=`prodbarcode`
+LEFT JOIN `barangmasuk` ON `detfaktur`=`faktur`
+LEFT JOIN `suplier` ON `idsup`=`supid`
+ORDER BY `prodnama` ASC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_detail`
+LEFT JOIN `produk` ON `detbrgkode`=`prodbarcode`
+LEFT JOIN `barangmasuk` ON `detfaktur`=`faktur`
+LEFT JOIN `suplier` ON `idsup`=`supid`
+ORDER BY `prodnama` ASC
+ LIMIT 10', [], false)
+ 4 APPPATH\Models\ModelBarangMasukDetailPagination.php(60): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\AdminBarangMasuk.php(887): App\Models\ModelBarangMasukDetailPagination->get_datatables('', '', '')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->detailListDataBarangMasuk()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-11-19 03:29:10 --> [Caused by] mysqli_sql_exception: Unknown column 'detbrgkode' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `barangmasuk_detail`
+LEFT JOIN `produk` ON `detbrgkode`=`prodbarcode`
+LEFT JOIN `barangmasuk` ON `detfaktur`=`faktur`
+LEFT JOIN `suplier` ON `idsup`=`supid`
+ORDER BY `prodnama` ASC
+ LIMIT 10', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `barangmasuk_detail`
+LEFT JOIN `produk` ON `detbrgkode`=`prodbarcode`
+LEFT JOIN `barangmasuk` ON `detfaktur`=`faktur`
+LEFT JOIN `suplier` ON `idsup`=`supid`
+ORDER BY `prodnama` ASC
+ LIMIT 10')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `barangmasuk_detail`
+LEFT JOIN `produk` ON `detbrgkode`=`prodbarcode`
+LEFT JOIN `barangmasuk` ON `detfaktur`=`faktur`
+LEFT JOIN `suplier` ON `idsup`=`supid`
+ORDER BY `prodnama` ASC
+ LIMIT 10')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `barangmasuk_detail`
+LEFT JOIN `produk` ON `detbrgkode`=`prodbarcode`
+LEFT JOIN `barangmasuk` ON `detfaktur`=`faktur`
+LEFT JOIN `suplier` ON `idsup`=`supid`
+ORDER BY `prodnama` ASC
+ LIMIT 10', [], false)
+ 5 APPPATH\Models\ModelBarangMasukDetailPagination.php(60): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\AdminBarangMasuk.php(887): App\Models\ModelBarangMasukDetailPagination->get_datatables('', '', '')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->detailListDataBarangMasuk()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 03:30:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:30:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-19 03:30:53 --> ErrorException: Undefined property: stdClass::$prodnama
+in APPPATH\Controllers\AdminBarangMasuk.php on line 899.
+ 1 APPPATH\Controllers\AdminBarangMasuk.php(899): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$prodnama', 'C:\\xampp\\htdocs\\tokoplastik\\app\\Controllers\\AdminBarangMasuk.php', 899)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->detailListDataBarangMasuk()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 03:30:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-19 03:30:59 --> ErrorException: Undefined property: stdClass::$prodnama
+in APPPATH\Controllers\AdminBarangMasuk.php on line 899.
+ 1 APPPATH\Controllers\AdminBarangMasuk.php(899): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$prodnama', 'C:\\xampp\\htdocs\\tokoplastik\\app\\Controllers\\AdminBarangMasuk.php', 899)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarangMasuk->detailListDataBarangMasuk()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarangMasuk))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 03:31:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:31:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:31:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:31:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:31:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:31:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:31:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:31:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:31:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:31:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:33:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:33:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:34:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:34:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:36:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:36:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:36:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:36:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:36:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:36:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:36:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:37:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:37:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:37:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:37:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:37:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:37:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:37:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:37:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:37:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:37:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:37:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:37:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:37:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:37:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:43:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:43:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:43:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:43:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:43:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:43:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:43:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:43:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:43:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:43:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:43:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:43:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:43:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:43:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:43:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:43:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:43:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:44:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:44:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:45:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:45:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:45:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:45:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:45:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:45:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:45:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:45:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:45:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:45:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:45:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:45:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:45:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:45:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:46:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:46:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:47:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:47:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:47:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:47:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:47:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 03:47:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:15:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:15:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:15:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:15:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:19:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:19:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:21:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:21:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:21:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:22:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:22:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:22:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:22:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:22:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:22:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:22:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:22:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:22:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:22:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:22:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:22:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:22:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:22:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:22:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:22:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:22:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:23:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:23:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:23:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:23:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:23:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:24:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:24:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:24:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:24:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:24:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:24:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:25:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:25:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:25:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:25:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:25:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:30:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:30:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:30:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:30:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:30:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:30:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:30:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:30:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:30:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:30:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:30:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:30:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:30:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:30:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:31:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:31:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:31:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:31:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:31:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:31:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:52:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:54:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:54:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:54:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:54:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:54:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:54:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:54:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:54:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:54:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:54:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:54:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:57:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:57:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:57:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:57:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:58:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:58:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:59:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:59:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:59:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:59:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:59:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:59:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:59:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 04:59:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:08:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:08:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:19:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:19:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:21:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:21:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:22:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:22:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:23:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:24:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:24:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:24:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:24:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:24:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:25:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:25:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:25:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:26:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:34:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:34:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:34:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:34:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:34:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:36:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:36:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-19 06:36:14 --> Error: Call to undefined method CodeIgniter\Database\MySQLi\Result::getRowtArray()
+in APPPATH\Controllers\AdminBarang.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarang->listDataBarang()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarang))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 06:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:38:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-19 06:38:15 --> Error: Object of class stdClass could not be converted to string
+in APPPATH\Controllers\AdminBarang.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarang->listDataBarang()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarang))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 06:38:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-19 06:38:31 --> Error: Object of class stdClass could not be converted to string
+in APPPATH\Controllers\AdminBarang.php on line 44.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminBarang->listDataBarang()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminBarang))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-11-19 06:38:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:38:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:38:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:38:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:39:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:39:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:39:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:39:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:42:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:42:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:42:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:42:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:42:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:42:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:42:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:42:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:42:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:43:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:43:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:43:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:43:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:43:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:45:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:45:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:45:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:45:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:45:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:45:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:45:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:45:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:45:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:45:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:45:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:46:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 06:46:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:20:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:22:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:23:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:23:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:24:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:24:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:25:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:36:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:36:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:36:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:36:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:37:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:37:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:41:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:41:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:44:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:44:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:44:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:44:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:50:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:50:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:50:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:50:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:50:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:50:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:50:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:50:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:51:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:51:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:52:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 07:52:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 08:01:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 08:04:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 08:04:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 08:04:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 08:04:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 08:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 08:55:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 09:01:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 09:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 09:07:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 09:07:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 09:07:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 09:07:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 09:07:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 09:07:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 09:07:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 09:07:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 09:07:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-19 09:17:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
